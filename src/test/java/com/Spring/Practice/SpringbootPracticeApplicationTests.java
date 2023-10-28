@@ -30,5 +30,19 @@ class SpringbootPracticeApplicationTests {
 		System.out.println(student);
 	}
 
+	@Test
+	void testupdateStudentById() {
+		Student student=  studentRepository.findById(1L).get();
+		student.setName("Kamal");
+		student.setFee(10d);
+		student.setCourse("mathematics");
+		studentRepository.save(student);
+	}
+
+
+
+
+
+
 
 }
