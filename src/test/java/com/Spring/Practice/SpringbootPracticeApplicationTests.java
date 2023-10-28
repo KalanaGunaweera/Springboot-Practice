@@ -22,9 +22,13 @@ class SpringbootPracticeApplicationTests {
 		student.setName("Kalana");
 		student.setCourse("Engineering");
 		student.setFee(300d);
-
-
 		studentRepository.save(student);
 	}
+	@Test
+	void testfindStudentById() {
+		Student student=  studentRepository.findById(2L).get();
+		System.out.println(student);
+	}
+
 
 }
