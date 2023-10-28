@@ -38,6 +38,12 @@ class SpringbootPracticeApplicationTests {
 		student.setCourse("mathematics");
 		studentRepository.save(student);
 	}
+	@Test
+	void testdeleteStudent() {
+		Student student=  studentRepository.findById(1L).get();
+		studentRepository.delete(student);
+	}
+
 
 
 
